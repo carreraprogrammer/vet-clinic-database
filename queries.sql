@@ -12,3 +12,8 @@
 
     SELECT name FROM animals
     WHERE neutered = true AND escape_attempts < 3;
+
+/* List the date of birth of all animals named either "Agumon" or "Pikachu". */
+
+    SELECT date_of_birth FROM animals
+    WHERE name = 'Agumon' OR name = 'Pikachu';

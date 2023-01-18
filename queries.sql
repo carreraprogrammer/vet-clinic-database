@@ -121,5 +121,8 @@ SELECT neutered, ROUND(AVG(escape_attempts), 2)
 FROM animals
 GROUP BY neutered;
 
-
 /* What is the minimum and maximum weight of each type of animal? */
+
+SELECT species, MIN(weight_kg) AS min_weight, MAX(weight_kg) AS max_weight
+FROM animals
+GROUP BY species;

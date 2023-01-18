@@ -106,3 +106,7 @@ SELECT COUNT(*) FROM animals;
 
 SELECT COUNT(*) FROM animals
 WHERE escape_attempts = 0;
+
+/* What is the average weight of animals? */
+
+SELECT AVG(weight_kg) FROM animals;

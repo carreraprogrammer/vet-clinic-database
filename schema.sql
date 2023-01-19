@@ -18,3 +18,12 @@ ADD COLUMN species VARCHAR(200);
 COMMIT;
 
 /* Create a table named owners with the following column */
+
+BEGIN;
+CREATE TABLE owners(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  full_name VARCHAR(200),
+  age INT,
+  PRIMARY KEY(id)
+);
+COMMIT;

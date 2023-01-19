@@ -60,3 +60,12 @@ SET owner_id =
     WHEN name = 'Angemon' OR name = 'Boarmon' THEN 5
     ELSE NULL
     END;
+
+/* Modify your inserted animals so it includes the species_id value: */
+
+UPDATE animals
+SET species_id =
+    CASE
+    WHEN name LIKE '%mon' THEN 2
+    ELSE 1
+    END;

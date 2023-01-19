@@ -36,4 +36,12 @@ CREATE TABLE species(
     name VARCHAR(200),
     PRIMARY KEY(id)
 );
-COMMIT
+COMMIT;
+
+/* Delete species column */
+
+BEGIN;
+
+ALTER TABLE animals
+DROP COLUMN species;
+

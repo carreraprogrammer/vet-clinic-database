@@ -45,3 +45,17 @@ BEGIN;
 ALTER TABLE animals
 DROP COLUMN species;
 
+COMMIT;
+
+/* Add column species_id which is a foreign key referencing species table */
+
+BEGIN;
+
+ALTER TABLE animals
+ADD COLUMN species_id INT;
+
+ALTER TABLE animals
+ADD CONSTRAINT fk_species_id
+FOREIGN KEY (species_id) 
+REFERENCES species(id);
+

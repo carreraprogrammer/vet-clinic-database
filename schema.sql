@@ -17,3 +17,4 @@ ALTER TABLE animals
 ADD COLUMN species VARCHAR(200);
 COMMIT;
 
+/* Create a table named owners with the following column */

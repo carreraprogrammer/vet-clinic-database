@@ -27,3 +27,13 @@ CREATE TABLE owners(
   PRIMARY KEY(id)
 );
 COMMIT;
+
+/* Create a table named species */
+
+BEGIN;
+CREATE TABLE species(
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(200),
+    PRIMARY KEY(id)
+);
+COMMIT

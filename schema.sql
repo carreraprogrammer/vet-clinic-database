@@ -17,3 +17,60 @@ ALTER TABLE animals
 ADD COLUMN species VARCHAR(200);
 COMMIT;
 
+/* Create a table named owners with the following column */
+
+BEGIN;
+CREATE TABLE owners(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  full_name VARCHAR(200),
+  age INT,
+  PRIMARY KEY(id)
+);
+COMMIT;
+
+/* Create a table named species */
+
+BEGIN;
+CREATE TABLE species(
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(200),
+    PRIMARY KEY(id)
+);
+COMMIT;
+
+/* Delete species column */
+
+BEGIN;
+
+ALTER TABLE animals
+DROP COLUMN species;
+
+COMMIT;
+
+/* Add column species_id which is a foreign key referencing species table */
+
+BEGIN;
+
+ALTER TABLE animals
+ADD COLUMN species_id INT;
+
+ALTER TABLE animals
+ADD CONSTRAINT fk_species_id
+FOREIGN KEY (species_id) 
+REFERENCES species(id);
+
+COMMIT;
+
+/* Add column owner_id which is a foreign key referencing the owners table */
+
+BEGIN;
+
+ALTER TABLE animals
+ADD COLUMN owner_id INT;
+
+ALTER TABLE animals
+ADD CONSTRAINT dk_owner_id
+FOREIGN KEY(owner_id)
+REFERENCES owners(id);
+
+COMMIT;

@@ -24,3 +24,48 @@ VALUES ('Charmander', '2020-02-08', 0, false, -11),
 
 COMMIT;
 
+/* Insert data in the owners table */
+
+BEGIN;
+
+INSERT INTO owners(full_name, age)
+VALUES ('Sam Smith', 34),
+       ('Jennifer Orwell', 19),
+       ('Bob', 45),
+       ('Melody Pond', 77),
+       ('Dean Winchester', 14),
+       ('Jodie Whittaker', 38);
+
+COMMIT;
+
+/* Insert data in species table */
+
+BEGIN;
+
+INSERT INTO species(name)
+VALUES ('Pokemon'),
+       ('Digimon');
+
+COMMIT;
+
+/* Include owner information in animals table */
+
+UPDATE animals
+SET owner_id = 
+    CASE 
+    WHEN name = 'Agumon' THEN 1
+    WHEN name = 'Gabumon' OR name = 'Pikachu' THEN 2
+    WHEN name = 'Devimon' OR name = 'Plantmon' THEN 3
+    WHEN name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom' THEN 4
+    WHEN name = 'Angemon' OR name = 'Boarmon' THEN 5
+    ELSE NULL
+    END;
+
+/* Modify your inserted animals so it includes the species_id value: */
+
+UPDATE animals
+SET species_id =
+    CASE
+    WHEN name LIKE '%mon' THEN 2
+    ELSE 1
+    END;

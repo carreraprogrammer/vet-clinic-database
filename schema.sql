@@ -78,8 +78,6 @@ COMMIT;
 
 /* Create a table named vets with the following columns: */
 
-BEGIN;
-
 CREATE TABLE vets(
   id INT GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(200),
@@ -87,3 +85,14 @@ CREATE TABLE vets(
   date_of_graduation DATE,
   PRIMARY KEY(id)
 );
+
+/* There is a many-to-many relationship between the tables species and vets: a vet can specialize in multiple species, and a species can have multiple vets specialized in it. Create a "join table" called specializations to handle this relationship. */
+
+CREATE TABLE specializations(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  vet_id INT ,
+  species_id INT,
+  PRIMARY KEY(id),
+  FOREIGN KEY (vet_id) REFERENCES vets(id),
+  FOREIGN KEY (species_id) REFERENCES species(id)
+)

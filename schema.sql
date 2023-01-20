@@ -74,3 +74,16 @@ FOREIGN KEY(owner_id)
 REFERENCES owners(id);
 
 COMMIT;
+
+
+/* Create a table named vets with the following columns: */
+
+BEGIN;
+
+CREATE TABLE vets(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR(200),
+  age INT,
+  date_of_graduation DATE,
+  PRIMARY KEY(id)
+);

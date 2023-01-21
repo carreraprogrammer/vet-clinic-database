@@ -218,9 +218,11 @@ HAVING v.name = 'Stephanie Mendez';
 
 /* List all vets and their specialties, including vets with no specialties. */
 
-SELECT v.name, sp.name
+SELECT v.name, sp.name AS specialization
 FROM vets v
 LEFT JOIN specializations s
 ON v.id = s.vet_id
 LEFT JOIN species sp
 ON sp.id = s.species_id;
+
+/*

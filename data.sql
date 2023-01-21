@@ -90,7 +90,7 @@ VALUES
 
 /* Insert the following data for visits */
 
-INSERT INTO visit(animal_id, vet_id, date_of_visits)
+INSERT INTO visits(animal_id, vet_id, date_of_visits)
 VALUES
     (1, 1, '2020-05-24'),
     (1, 3, '2020-07-22'),

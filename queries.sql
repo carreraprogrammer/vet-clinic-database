@@ -270,3 +270,14 @@ JOIN visits d ON d.animal_id = a.id
 JOIN vets v ON v.id = d.vet_id
 ORDER BY d.date_of_visits DESC
 LIMIT 1;
+
+/* How many visits were with a vet that did not specialize in that animal's species? */
+
+/* Query to count the number of visits INCLUDIN MAISY WITHOUT SPECIALIZATION */ 
+
+SELECT COUNT(*) AS number_of_visits
+FROM animals a
+LEFT JOIN visits d ON d.animal_id = a.id
+LEFT JOIN specializations sp ON sp.vet_id = d.vet_id
+LEFT JOIN vets v ON v.id = sp.vet_id
+WHERE a.species_id != sp.species_id OR v.name IS NULL

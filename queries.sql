@@ -192,11 +192,3 @@ ON a.owner_id = o.id
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 1;
-
-
-SELECT o.full_name, MAX(count(*)) AS number_of_animals
-FROM owners o
-JOIN animals a
-ON a.owner_id = o.id
-GROUP BY 1;
-

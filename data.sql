@@ -69,3 +69,4 @@ SET species_id =
     WHEN name LIKE '%mon' THEN 2
     ELSE 1
     END;
+    

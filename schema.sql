@@ -114,3 +114,7 @@ CREATE INDEX idx_animal_id ON visits(animal_id);
 -- Improve second EXPLAIN ANALIZE query
 
 CREATE INDEX idx_vet_id ON visits(vet_id);
+
+-- Improve third EXPLAIN ANALIZE query
+
+CREATE INDEX idx_email ON owners(email);

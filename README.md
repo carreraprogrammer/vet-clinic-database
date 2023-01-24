@@ -77,6 +77,12 @@ Clone this repository to your desired folder:
 - Twitter: [@carreraprog](https://twitter.com/carreraprog)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/daniel-carrera-85a917244/)
 
+👤 **ITALO**
+
+- GitHub: [@storres20](https://github.com/storres20)
+- Twitter: [@italolonkan](https://twitter.com/italolonkan)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/italo-lon-kan)
+
 
 ## 🤝 Contributing <a name="contributing"></a>
 
